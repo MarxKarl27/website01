@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Website Design Using HTML And CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/CAT-logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Just</a></li>
+                    <li><a href="#">Some</a></li>
+                    <li><a href="#">Useless</a></li>
+                    <li><a href="#">Buttons lol</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/vertical.jpg" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/img2.jpg">
+                    <div>
+                        <h1>Cat 1</h1>
+                        <p>-</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/img1.jpg">
+                    <div>
+                        <h1>Cat 1</h1>
+                        <p>-</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/img3.jpg">
+                    <div>
+                        <h1>Cat 3</h1>
+                        <p>-</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/img4.jpg">
+                    <div>
+                        <h1>Cat 4</h1>
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="arrow.png" id="upBtn">
+            <h3>Cats</h3>
+            <img src="arrow.png" id="downBtn">
+        </div>
+
+    </div>
+
+
+    <script>
+        var circle = document.getElementById("circle")
+        var upBtn = document.getElementById("upBtn")
+        var downBtn = document.getElementById("downBtn")
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+        
+        upBtn.onclick = function(){
+
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+
+        downBtn.onclick = function(){
+
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
